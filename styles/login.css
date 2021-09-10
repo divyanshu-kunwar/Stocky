@@ -18,7 +18,7 @@ body{
 }
 #topbar{
     width: calc(100% - 4px);
-    height: 36px;
+    height: 30px;
     padding : 2px;
     display: flex;
 }
@@ -28,6 +28,9 @@ body{
 }
 #topOptions{
     width: 85px;
+}
+#topbar img{
+    height: 30px;
 }
 #topOptions img{
     /* margin-left: 0px; */
