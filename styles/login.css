@@ -275,3 +275,33 @@ body{
     margin-left: calc(100% - 20px);
     cursor: pointer;
 }
+#email_verification_sent{
+    position: fixed;
+    width: 55%;
+    height: 25%;
+    left: 20%;
+    top: 35%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--translucent-color);
+    border-radius: 8px;
+}
+#email_verification_sent h1{
+    text-align: center;
+}
+#email_verification_sent p{
+    text-align: center;
+}
+.btn2_input{
+    height: 44px;
+    margin-top: 20px;
+    margin-left: 30%;
+    font-size: large;
+    border-radius: 4px;
+    background-color: var(--background-color2);
+    color: var(--text-color);
+    border: 1px solid var(--background-color2);
+    opacity: 0.8;
+}

@@ -159,9 +159,6 @@ window.addEventListener('DOMContentLoaded', () => {
             send_msg("Enter valid email", "#ff0000")
         }
     })
-    ipcRenderer.on("email_rec_sent",()=>{
-        send_msg("email for recovery sent successfully","#00ff00")
-    })
     ipcRenderer.on('recover_error', ()=>{
         send_msg("Unknown error: cannot recover password", "#ff0000")
     })
@@ -189,15 +186,6 @@ window.addEventListener('DOMContentLoaded', () => {
                     "DOB":  date_input.value+"-"+month_input.value+"-"+year_input.value}
         ipcRenderer.send("main:registerApp", registrationInfo)
     }
-    
-    //close the window after 5 secs of success registration
-    ipcRenderer.on("registration_success", () => {
-        send_msg("Registered successfully", "#00ff00")
-        setTimeout(() => {
-            ipcRenderer.send("main:close_login_win")
-        }, 5000)
-
-    })
     //registration failed
     ipcRenderer.on("registration_failed", ()=>{
         send_msg("Error Unknown : can't register","#ff0000")
@@ -209,6 +197,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //verify email
     ipcRenderer.on("email_reg_sent",()=>{
         send_msg("verification email sent successfully", "#ff0000")
+        displayEmailSent()
     })
 
     continue_reg.addEventListener("click", () => {
@@ -335,7 +324,6 @@ window.addEventListener('DOMContentLoaded', () => {
     tooglePassword("password_visibility_login", password_login)
     tooglePassword("password_visibility_reg", password_reg)
 
-
     // ------ code for minimizing and closing the Current Window ----------
 
     minimize_btn = document.getElementById('minimize_btn')
@@ -363,6 +351,21 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 1500)
     }
 
+    //show email sent message 
+    const emailDialog = document.getElementById('email_verification_sent')
+    function displayEmailSent(){
+        emailDialog.style.display = 'block'
+        reg_card.style.display = "none"
+        login_card.style.display = "none"
+        forget_card.style.display = "none"
+    }
+
+    //------- login again after verification ----------
+    document.getElementById("login_again").addEventListener("click", ()=>{
+        emailDialog.style.display = 'none'
+        login_card.style.display = "block"
+    })
+
     // show the privacy policy card
     document.getElementById("term_condition").addEventListener("click",()=>{
         privacy_policy_card.style.display = "block";
@@ -384,7 +387,8 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             document.getElementById("offline_status").style.display = "none"
             if (login_card.style.display == "none" && reg_card.style.display == "none"
-                && forget_card.style.display == "none" && privacy_policy_card.style.display == "none") {
+                && forget_card.style.display == "none" && privacy_policy_card.style.display == "none"
+                && emailDialog.style.display == "none") {
                 login_card.style.display = "block"
             }
         }
