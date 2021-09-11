@@ -1,6 +1,7 @@
 :root{
     --background-color : #000;
     --background-color2 : #36393F;
+    --translucent-color : #00000099;
     --primary-color : #34A853;
     --link-color : #7DBB02;
     --text-color : #fff;
@@ -127,7 +128,7 @@ body{
     width: 400px;
     height: 570px;
     left: calc(50% - 200px);
-    top: calc(50% - 285px);
+    top: calc(50% - 255px);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 20px;
@@ -184,4 +185,41 @@ body{
 #term_condition span{
     cursor: pointer;
     color: var(--link-color);
+}
+#messagePop{
+    position: fixed;
+    width: 400px;
+    min-height: 20px;
+    max-height: 40px;
+    left: calc(50% - 200px);
+    top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--translucent-color);
+    border-radius: 4px;
+}
+.input_icon{
+    margin-top: -35px;
+    margin-left: 90%;
+}
+#offline_status{
+    position: fixed;
+    width: 85%;
+    height: 85%;
+    left: 5%;
+    top: 5%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--background-color2);
+    border-radius: 8px;
+}
+#offline_status h1{
+    text-align: center;
+}
+#offline_status p{
+    text-align: center;
 }
