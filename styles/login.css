@@ -206,15 +206,15 @@ body{
 }
 #offline_status{
     position: fixed;
-    width: 85%;
-    height: 85%;
-    left: 5%;
-    top: 5%;
+    width: 55%;
+    height: 15%;
+    left: 20%;
+    top: 35%;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: var(--background-color2);
+    background-color: var(--translucent-color);
     border-radius: 8px;
 }
 #offline_status h1{

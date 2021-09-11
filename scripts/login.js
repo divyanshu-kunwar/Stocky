@@ -238,12 +238,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 1500)
     }
 
-    // check for internet connectivity
+    //check for internet connectivity
     setInterval(()=>{
         if(!navigator.onLine){
             document.getElementById("offline_status").style.display = "block"
+            login_card.style.display = "none"
+            reg_card.style.display = "none"
         }else{
             document.getElementById("offline_status").style.display = "none"
+            if(login_card.style.display == "none" && reg_card.style.display == "none"){
+                login_card.style.display = "block"
+            }
         }
     },1000)
 })
