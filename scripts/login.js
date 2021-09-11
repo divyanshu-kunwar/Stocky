@@ -22,8 +22,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const open_login_btn = document.getElementById("already_account")
     const open_reg_btn = document.getElementById("need_account")
+    const open_forget_pass_btn = document.getElementById("password_forget")
+    const open_login_btn2 = document.getElementById("account_exist")
     const login_card = document.getElementById("login_card")
     const reg_card = document.getElementById("registration_card")
+    const forget_card = document.getElementById("forget_password_card")
 
     open_login_btn.addEventListener("click", () => {
         login_card.style.display = "block"
@@ -70,6 +73,52 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     })
+    open_forget_pass_btn.addEventListener("click" , ()=>{
+
+        
+        login_card.style.display = "none"
+        forget_card.style.display = "block"
+        // Added basic animation keyframe
+        login_card.animate([
+            { opacity: '1' },
+            { transform: 'translateX(0px)' },
+            { transform: 'translateX(60px)' },
+        ], {
+            duration: 1000
+        })
+
+        forget_card.animate([
+            { opacity: '0' },
+            { transform: 'translateX(60px)' },
+            { transform: 'translateX(0px)' },
+        ], {
+            duration: 500
+        })
+
+    })
+    open_login_btn2.addEventListener("click", ()=>{
+
+        login_card.style.display = "block"
+        forget_card.style.display = "none"
+        // Added basic animation keyframe
+        login_card.animate([
+            { opacity: '0' },
+            { transform: 'translateX(60px)' },
+            { transform: 'translateX(0px)' },
+        ], {
+            duration: 500
+        })
+
+        forget_card.animate([
+            { opacity: '1' },
+            { transform: 'translateX(0px)' },
+            { transform: 'translateX(60px)' },
+        ], {
+            duration: 1000
+        })
+
+    })
+
 
     //------------- validation of form ------------------
 
@@ -81,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 + "characters or has less than 3 characters", "#ff0000")
         } else if (!validatePassword(password_reg.value)) {
             send_msg("password must be 8 characters long and"
-                + " contain uppercase , lowercase and number", "#ff0000")
+                + " contain uppercase , lowercase number and special character", "#ff0000")
         } else {
             submitForm()
         }
@@ -106,6 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let lowerCaseLetters = /[a-z]/g
         let upperCaseLetters = /[A-Z]/g
         let numbers = /[0-9]/g
+        let invalidChar = "^[^#%&*:<>?/{|}]+$@_-"
         let response = ""
         if (password.length < 8) {
             response += "0"
@@ -130,18 +180,22 @@ window.addEventListener('DOMContentLoaded', () => {
         else {
             response += "0"
         }
-        if (response == "1111") {
+        if(!password.match(invalidChar)){
+            response += "1"
+        }else{
+            response += "0"
+        }
+        if (response == "11111") {
             console.log(response)
             return true
         }
         console.log(response)
         return false
-
     }
 
     // validates username
     function validateUsername(username) {
-        let invalidChar = "^[^#%&*:<>?/{|}]+$"
+        let invalidChar = "^[^#%&*:<>?/{|}]+-$"
         if ((!username.match(invalidChar)) || username.length < 4) {
             return false;
         }
@@ -244,9 +298,11 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementById("offline_status").style.display = "block"
             login_card.style.display = "none"
             reg_card.style.display = "none"
+            forget_card.style.display = "none"
         }else{
             document.getElementById("offline_status").style.display = "none"
-            if(login_card.style.display == "none" && reg_card.style.display == "none"){
+            if(login_card.style.display == "none" && reg_card.style.display == "none" 
+            && forget_card.style.display == "none"){
                 login_card.style.display = "block"
             }
         }

@@ -223,3 +223,33 @@ body{
 #offline_status p{
     text-align: center;
 }
+#forget_password_card{
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--background-color2);
+    border-radius: 8px;
+}
+#forget_label{
+    text-align: center;
+    font-size: 18px;
+}
+#forget_label2{
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color2);
+}
+#account_exist{
+    font-size: 14px;
+    color: var(--text-color2);
+}
+#account_exist span{
+    color: var(--link-color);
+    cursor: pointer;
+}

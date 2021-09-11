@@ -28,7 +28,7 @@
     <div id="fullScreenCover">
 
         <!--All fields and inputs for login-->
-        <div id="login_card" style="display: none;">
+        <div id="login_card" style="display: block;">
             <p id="welcome_content">Welcome back!</p>
             <p id="excited_see_content">We're so excited to see you again!</p>
             <p id="email_label" class="label_inputs">EMAIL OR USERNAME</p>
@@ -39,6 +39,15 @@
             <p id="password_forget">Forgot your password?</p>
             <button id="log_in_btn" class="btn_input">Login</button>
             <p id="need_account">Need an account?<span>Register</span></p>
+        </div>
+
+        <div id="forget_password_card" style="display: none;">
+            <p id="forget_label">Forget password?</p>
+            <p id="forget_label2"> No worry, we will help you recover </p>
+            <p id="email_forget_label" class="label_inputs">EMAIL</p>
+            <input id="email_forget_input" type="email" placeholder="someone@email.com" class="input_box" />
+            <button id="recover_btn" class="btn_input">Recover</button>
+            <p id="account_exist">Remembered? <span>LogIn</span></p>
         </div>
 
         <!-- All fields and inputs for registration-->

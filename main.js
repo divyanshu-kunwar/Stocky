@@ -47,3 +47,21 @@ ipcMain.on('main:min_login_win', event => {
 ipcMain.on('main:close_login_win', event => {
     login_win.close()
 })
+
+// Import the functions you need from the SDKs you need
+//import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+
+
+// Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBTmLGFaxxgDaBmcoOnbQXAX3jO00xxuco",
+//   authDomain: "stocky-0.firebaseapp.com",
+//   projectId: "stocky-0",
+//   storageBucket: "stocky-0.appspot.com",
+//   messagingSenderId: "448393168193",
+//   appId: "1:448393168193:web:4aad08a13be2e808318dc0"
+// };
+
+// Initialize Firebase
+// const app = initializeApp(firebaseConfig);
