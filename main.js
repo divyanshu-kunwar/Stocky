@@ -41,11 +41,33 @@ app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
   })
 
-ipcMain.on('main:min_login_win', event => {
+ipcMain.on('main:min_login_win', () => {
     login_win.minimize()
 })
-ipcMain.on('main:close_login_win', event => {
+ipcMain.on('main:close_login_win', () => {
     login_win.close()
+})
+
+ipcMain.on('main:logInApp',function(e,loginInfo){
+    console.log(loginInfo);
+
+    //login_win.webContents.send("login_success");
+    login_win.webContents.send("login_failed");
+})
+ipcMain.on('main:registerApp',function(e,registrationInfo){
+  console.log(registrationInfo);
+
+
+  //login_win.webContents.send("email_reg_sent");
+  //login_win.webContents.send("registration_success");
+  login_win.webContents.send("registration_failed");
+  //login_win.webContents.send("username_registered");
+})
+ipcMain.on('main:request_recover',function(e,emailId){
+  console.log(emailId);
+
+  //login_win.webContents.send("email_rec_sent");
+  login_win.webContents.send("recover_error");
 })
 
 // Import the functions you need from the SDKs you need
