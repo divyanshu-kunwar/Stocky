@@ -1,0 +1,22 @@
+:root{
+    --background-color : #000;
+    --background-color2 : #36393F;
+    --translucent-color : #00000099;
+    --primary-color : #34A853;
+    --link-color : #7DBB02;
+    --text-color : #fff;
+    --text-color2 : #B9BBBE;
+    --text-color3 : #72767D;
+    --input-background : #303339;
+    --input-strokes : #222428;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+#topbar{
+    display: flex;
+}
