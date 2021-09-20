@@ -20,3 +20,63 @@ body{
 #topbar{
     display: flex;
 }
+
+#topOptions{
+    display: flex;
+    width: auto;
+    position: absolute;
+    right: 2px;
+}
+#minimize_btn{
+    margin: 0px 1px;
+    position: relative;
+    cursor: pointer;
+}
+#maximize_btn{
+    margin: 0px 20px;
+    position: relative;
+    cursor: pointer;
+}
+#close_btn:hover{
+    background-color: crimson;
+    cursor: pointer;
+}
+
+#draggable-area{
+    margin: 0px 20px;
+    position: relative;
+}
+
+#main{
+    display: flex;
+}
+
+#side_bar{
+    background: var(--background-color);
+    height: 100%;
+    width: 80px;
+    border-right: 1px solid var(--background-color);
+}
+#side_menu{
+    padding: 25px;
+}
+#side_menu img{
+    display: block;
+    margin-top: 45px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+#side_menu img:hover{
+   opacity: 1;
+}
+#search{
+    width: 370px;
+    height: 800px;
+    background-color:aquamarine;
+}
+
+#full{
+    width: 1350px;
+    height: 800px;
+    background-color:bisque;
+}
