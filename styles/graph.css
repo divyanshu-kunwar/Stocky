@@ -1,0 +1,160 @@
+:root{
+    --background-color : #000;
+    --background-color2 : #36393F;
+    --translucent-color : #00000099;
+    --primary-color : #34A853;
+    --link-color : #7DBB02;
+    --text-color : #fff;
+    --text-color2 : #B9BBBE;
+    --text-color3 : #72767D;
+    --input-background : #303339;
+    --input-strokes : #222428;
+}
+body{
+    display: flex;
+    margin: 0%;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#normal_space{
+    width: 29.8%;
+    background-color: rgb(0, 0, 0);
+    border-right: 1px solid var(--input-strokes);
+}
+#graph_area{
+    width: 70%;
+    background-color: black;
+}
+#top_graph_menu{
+    width: 100%;
+    padding: 1px;
+    display: flex;
+}
+#company_name{
+    width: 110px;
+    padding: 5px;
+    border: 1px solid var(--background-color2);
+    color: var(--text-color3);
+    font-weight: bold;
+}
+#data_period{
+    width: 25px;
+    padding: 5px;
+    border: 1px solid var(--background-color2);
+    color: var(--text-color3);
+    font-weight: bold;
+}
+#ind_change{
+    width: 35px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+}
+#ind_change img{
+    height: 28px;
+    opacity: 0.6;
+}
+#compare_with{
+    width: 110px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+    display: flex;
+    align-items: center;
+    color: var(--text-color3);
+}
+#compare_with img{
+    height: 28px;
+    opacity: 0.6;
+}
+#opn_indicator{
+    width: 110px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+    display: flex;
+    align-items: center;
+    color: var(--text-color3);
+}
+#opn_indicator img{
+    height: 28px;
+    opacity: 0.6;
+}
+#opn_templates{
+    width: 110px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+    display: flex;
+    align-items: center;
+    color: var(--text-color3);
+}
+#opn_templates img{
+    height: 28px;
+    opacity: 0.6;
+}
+#alert{
+    width: 35px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+}
+#alert img{
+    height: 28px;
+    opacity: 0.6;
+}
+#technical_analysis{
+    width: 100px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+    display: flex;
+    align-items: center;
+    color: var(--text-color3);
+}
+#technical_analysis img{
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 17px;
+    opacity: 0.5;
+}
+#layout_change{
+    width: 35px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+}
+#layout_change img{
+    height: 28px;
+    opacity: 0.6;
+}
+#save_chart{
+    width: 80px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+    display: flex;
+    align-items: center;
+    color: var(--text-color3);
+}
+#save_chart img{
+    margin-top: 4px;
+    margin-right: 5px;
+    height: 20px;
+    opacity: 0.5;
+}
+#screenshot{
+    width: 35px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+}
+#screenshot img{
+    height: 28px;
+    opacity: 0.6;
+}
+#opn_settings{
+    width: 35px;
+    padding-left: 5px;
+    border: 1px solid var(--background-color2);
+}
+#opn_settings img{
+    height: 28px;
+    opacity: 0.6;
+}
+#graph{
+    padding-top: 3px;
+    background-color: #222428;
+    height: calc(100% - 38px);
+}
