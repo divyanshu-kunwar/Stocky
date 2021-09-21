@@ -25,13 +25,32 @@ function createWindow() {
   login_win.maximize();
 }
 
+let graphWin;
+//create window for graph
+function createGraphWindows() {
+  graphWin = new BrowserWindow({
+    width: 800,
+    height: 600,
+    resizable: true,
+    // load javascript for login page
+    webPreferences: {
+      preload: path.join(__dirname, 'scripts/graphwin.js'),
+      nodeIntegration: true,
+      enableRemoteModule: true
+    },
+
+  })
+  graphWin.loadFile('html-win/graphwin.html')
+  graphWin.maximize();
+}
+
 // when app is ready call the function to create login window
 app.whenReady().then(() => {
-  createWindow()
+  createGraphWindows()
 
   //  activating the app when no windows are available should open a new one one mac.
   app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createGraphWindows()
   })
 
 })
@@ -80,20 +99,26 @@ function checkUserName(username) {
 
 const firebase = require('firebase/app')
 const authentication = require('firebase/auth')
+const database = require('firebase/database')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBTmLGFaxxgDaBmcoOnbQXAX3jO00xxuco",
   authDomain: "stocky-0.firebaseapp.com",
   projectId: "stocky-0",
+  databaseURL:"https://stocky-0-default-rtdb.firebaseio.com/",
   storageBucket: "stocky-0.appspot.com",
   messagingSenderId: "448393168193",
-  appId: "1:448393168193:web:4aad08a13be2e808318dc0"
+  appId: "1:448393168193:web:4aad08a13be2e808318dc0",
+  
 }
 
 // Initialize Firebase
 const app_ = firebase.initializeApp(firebaseConfig)
 const auth = authentication.getAuth()
+const db = database.getDatabase()
+
+
 
 // send all data to firebase for authentication, registration and login
 function registerUserFirebase(email, password) {
@@ -164,3 +189,20 @@ authentication.onAuthStateChanged(auth, (user) => {
     console.log("user signed out")
   }
 });
+
+function firebaseLoadData(){
+  const companyRef = database.ref(db, 'userdata/d/1'); 
+  database.get(companyRef).then((snapshot) =>{
+      const companyData = snapshot.val();
+      sendDataToGraph(companyData);
+  }).catch((error) => {
+    console.error(error);
+  })
+}
+
+ipcMain.on("load_graph_data",()=>{
+  firebaseLoadData();
+})
+function sendDataToGraph(companyData){
+    graphWin.webContents.send("company_data_aaya" , companyData);
+}
