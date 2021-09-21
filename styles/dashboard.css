@@ -78,14 +78,45 @@ body{
    opacity: 1;
    filter: grayscale(0%) brightness(100%);
 }
-#search{
+#search_bar{
     width: 370px;
     height: 800px;
-    background-color:aquamarine;
+    background: var(--background-color2);
+}
+
+#search_box{
+    display:flex;
+       
+}
+
+#search_menu{
+    position:absolute;
+    border: none;
+    width: 370px;
+    height: 45px;
+    padding-left: 90px;
+    z-index: 1;
+    background-color: var(--input-background);
+    font-size: medium;
+}
+
+#search_icon{
+    position: relative;
+    padding-left:20px;
+    padding-top: 10px;
+    z-index: 2;
+}
+
+
+#search_filter{
+    position: relative;
+    padding-left:290px;
+    padding-top: 10px;
+    z-index: 2;
 }
 
 #full{
-    width: 1350px;
+    width: 1370px;
     height: 800px;
-    background-color:bisque;
+    background: var(--background-color);
 }
