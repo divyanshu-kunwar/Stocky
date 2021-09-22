@@ -86,13 +86,13 @@ body{
 
 #search_box{
     display:flex;
-       
+    width: 370px;
 }
 
 #search_menu{
     position:absolute;
     border: none;
-    width: 370px;
+    width:370px;
     height: 45px;
     padding-left: 90px;
     z-index: 1;
