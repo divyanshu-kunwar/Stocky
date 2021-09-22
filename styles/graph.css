@@ -46,6 +46,7 @@ body{
 }
 #ind_change{
     width: 35px;
+    height: 95%;
     padding-left: 5px;
     border: 1px solid var(--background-color2);
 }
@@ -155,6 +156,97 @@ body{
 }
 #graph{
     padding-top: 3px;
-    background-color: #222428;
+    /*background-color: #5e6063;*/
     height: calc(100% - 38px);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    z-index: 2;
+    border: 1px solid var(--background-color2);
+    padding: 4px;
+    
+}
+#opn_period_type{
+    min-width: 120px;
+}
+#opn_period_type .graph-type{
+    padding-left: 30px;
+}
+.graph-type{
+    display: flex;
+    border: 1px solid #00000010;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+}
+.graph-type:hover{
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+}
+.graph-type img{
+    opacity: 0.8;
+    margin-right: 15px;
+}
+.graph-type:hover img{
+    opacity: 1;
+}
+#opn_templates_type{
+    min-width: 300px ;
+}
+.template_type{
+    display: block;
+    border: 1px solid #00000010;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    font-size: small;
+}
+.template_type:hover{
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+}
+.template_type span{
+    display: block;
+    font-size: xx-small;
+    color: var(--text-color3);
+    margin-top: 2px;
+}
+.period-type{
+    display: flex;
+    border: 1px solid #00000010;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+}
+.period-type:hover{
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+}
+.layout-type{
+    display: flex;
+    border: 1px solid #00000010;
+    align-items: center;
+    padding: 8px;
+    color: var(--text-color3);
+}
+.layout-type img{
+    margin-left: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.layout-type img:hover{
+    opacity: 1;
+    background: var(--link-color);
+}
+#opn_layout_type{
+    min-width: 200px;
 }
