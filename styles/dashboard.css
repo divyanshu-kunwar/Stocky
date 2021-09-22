@@ -116,6 +116,6 @@ body{
 
 #full{
     width: 65%;
-    height: 800px;
+    height: 96vh;
     background: var(--background-color);
 }
