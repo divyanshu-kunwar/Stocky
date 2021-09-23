@@ -7,11 +7,17 @@
     <title>Graph Window</title>
     <link rel="stylesheet" href="../styles/graph.css" />
 
+    <script src="../scripts/graphplots/p5.min.js"></script>
 <body>
+
+    <!-- space to be left for company_list -->
     <div id="normal_space"></div>
-    <div id="left_drawing_pannel">
+
+    <!-- Some menu related to drawing and other stuffs-->
+    <!-- <div id="left_drawing_pannel">
         <div id="hamburger_menu" class="side_menu_item"><img src="../icons/graphs_icons/hamburger.svg" /></div>
-        <div id="crosshair_icon" class="side_menu_item side_menu_selected_item"><img src="../icons/graphs_icons/crosshair.svg" /></div>
+        <div id="crosshair_icon" class="side_menu_item side_menu_selected_item"><img
+                src="../icons/graphs_icons/crosshair.svg" /></div>
         <div id="measure_icon" class="side_menu_item"><img src="../icons/graphs_icons/measureicon.svg" /></div>
         <div id="line_icon" class="side_menu_item"><img src="../icons/graphs_icons/lineicon.svg" /></div>
         <div id="brush_icon" class="side_menu_item"><img src="../icons/graphs_icons/brushicon.svg" /></div>
@@ -21,9 +27,10 @@
         <div id="symbol_icon" class="side_menu_item"><img src="../icons/graphs_icons/symbolicon.svg" /></div>
         <div id="visibility_icon" class="side_menu_item"><img src="../icons/graphs_icons/visibility_icon.svg" /></div>
         <div id="delete_icon" class="side_menu_item"><img src="../icons/graphs_icons/delete_icon.svg" /></div>
-    </div>
+    </div> -->
     <div id="graph_area">
-        <div id="top_graph_menu">
+        <!-- Horizontal menu for graphs-->
+        <!-- <div id="top_graph_menu">
             <div id="company_name"> ACC </div>
             <div class="dropdown">
                 <div id="data_period"> 1D </div>
@@ -80,14 +87,14 @@
             <div class="dropdown">
                 <div id="layout_change"><img src="../icons/graphs_icons/layout1.svg" /></div>
                 <div id="opn_layout_type" class="dropdown-content">
-                    <div class="layout-type"> 1 
+                    <div class="layout-type"> 1
                         <img src="../icons/graphs_icons/layout1.svg" />
-                         </div>
-                    <div class="layout-type"> 2 
+                    </div>
+                    <div class="layout-type"> 2
                         <img src="../icons/graphs_icons/layout2.svg" />
                         <img src="../icons/graphs_icons/layout2H.svg" />
                     </div>
-                    <div class="layout-type"> 3 
+                    <div class="layout-type"> 3
                         <img src="../icons/graphs_icons/layout3grid.svg" />
                         <img src="../icons/graphs_icons/layout3grid2.svg" />
                         <img src="../icons/graphs_icons/layout3grid3.svg" />
@@ -95,7 +102,7 @@
                         <img src="../icons/graphs_icons/layout3.svg" />
                         <img src="../icons/graphs_icons/layout3H.svg" />
                     </div>
-                    <div class="layout-type"> 4 
+                    <div class="layout-type"> 4
                         <img src="../icons/graphs_icons/layout4.svg" />
                         <img src="../icons/graphs_icons/layout4_2.svg" />
                         <img src="../icons/graphs_icons/layout4_3.svg" />
@@ -106,9 +113,28 @@
             <div id="save_chart"><img src="../icons/graphs_icons/save.svg" />Save</div>
             <div id="screenshot"><img src="../icons/graphs_icons/screenshot.svg" /></div>
             <div id="opn_settings"><img src="../icons/graphs_icons/settings.svg" /></div>
+        </div> -->
+
+        <!-- Graph plotting begins here -->
+        <div id="graph">
+            <!-- <Main></Main> -->
+
+
+            <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_873b4"></div>
+    <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  </div>
+  <!-- TradingView Widget END -->
+
+
         </div>
-        <div id="graph"> Graph Here </div>
     </div>
+
+    <!-- Scripts for fetching , rendering and displaying graphical data-->
+    <script src="../scripts/graphplots/sketch.js"></script>
+
 </body>
 
 </html>
