@@ -22,6 +22,7 @@ body{
     border-right: 1px solid var(--input-strokes);
 }
 #graph_area{
+    display: block;
     width: 70%;
     background-color: black;
 }
@@ -81,6 +82,7 @@ body{
 #opn_templates{
     width: 110px;
     padding-left: 5px;
+    padding-top: 2px;
     border: 1px solid var(--background-color2);
     display: flex;
     align-items: center;
@@ -100,12 +102,10 @@ body{
     opacity: 0.6;
 }
 #technical_analysis{
-    width: 100px;
+    width: 35px;
     padding-left: 5px;
+    padding-top: 2px;
     border: 1px solid var(--background-color2);
-    display: flex;
-    align-items: center;
-    color: var(--text-color3);
 }
 #technical_analysis img{
     margin-top: 5px;
@@ -116,6 +116,7 @@ body{
 #layout_change{
     width: 35px;
     padding-left: 5px;
+    padding-top: 2px;
     border: 1px solid var(--background-color2);
 }
 #layout_change img{
@@ -249,4 +250,53 @@ body{
 }
 #opn_layout_type{
     min-width: 200px;
+}
+#left_drawing_pannel{
+    display: flex;
+    width: 40px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-right: 1px solid var(--primary-color);
+}
+#hamburger_menu{
+    padding: 6px;
+    border-bottom: 1px solid var(--background-color2);
+}
+#hamburger_menu:hover{
+    background-color: var(--background-color);
+}
+#hamburger_menu:hover img{
+    filter: invert(0%);
+    transition: ease-in;
+    transform: scaleX(-1);
+}
+.side_menu_item{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    color: var(--text-color3);
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 32px;
+}
+.side_menu_item:hover{
+    background-color: var(--link-color);
+}
+.side_menu_item:hover img{
+    opacity: 1;
+    filter: invert(100%);
+}
+.side_menu_selected_item{
+    background-color: var(--primary-color);
+}
+.side_menu_item img{
+    opacity: 0.5;
+}
+#visibility_icon:hover img{
+    content: url('../icons/graphs_icons/visibility_hide.svg');
+}
+#visibility_icon img{
+    content: url('../icons/graphs_icons/visibility_icon.svg');
 }
