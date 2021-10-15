@@ -16,30 +16,30 @@ var foregroundColor = "#ffffff"
 
 let graphCanvas
 // setup default params
-// function setup(){
-//     graphCanvas = createCanvas(parentDivWidth, parentDivHeight)
-//     loadData();
-// }
+function setup(){
+    graphCanvas = createCanvas(parentDivWidth, parentDivHeight)
+    loadData();
+}
 
 // updated after every frames actual plotting begins here
-// function draw(){
-//     background(backgroundColor)
+function draw(){
+    background(backgroundColor)
 
-//     loadData()
-//     calculatePlotAndSubPlot()
-//     calculateScaleAndTransformation()
-//     plotGraph()
-//     plotIndicators()
-//     saveConfiguration()
+    loadData()
+    calculatePlotAndSubPlot()
+    calculateScaleAndTransformation()
+    plotGraph()
+    plotIndicators()
+    saveConfiguration()
 
-// }
+}
 
 // auto resize canvas on window resize
-// function windowResized() {
-//     parentDivWidth = parentDiv.getBoundingClientRect().width - padding
-//     parentDivHeight = parentDiv.getBoundingClientRect().height - padding
-//     resizeCanvas(parentDivWidth , parentDivHeight)
-//   }
+function windowResized() {
+    parentDivWidth = parentDiv.getBoundingClientRect().width - padding
+    parentDivHeight = parentDiv.getBoundingClientRect().height - padding
+    resizeCanvas(parentDivWidth , parentDivHeight)
+  }
   
   // function that is to be added to the different files 
   function loadData() {}
@@ -48,25 +48,3 @@ let graphCanvas
   function plotGraph() {}
   function plotIndicators() {}
   function saveConfiguration() {}
-
-  new TradingView.widget(
-    {
-    "width": parentDivWidth,
-    "height": parentDivHeight,
-    "symbol": "BSE:ACC",
-    "interval": "D",
-    "timezone": "Etc/UTC",
-    "theme": "dark",
-    "style": "1",
-    "autosize": true,
-    "locale": "in",
-    "toolbar_bg": "#f1f3f6",
-    "withdateranges": true,
-    "hide_side_toolbar": false,
-    "allow_symbol_change": true,
-    "show_popup_button": true,
-    "popup_width": "1000",
-    "popup_height": "650",
-    "container_id": "tradingview_873b4"
-  }
-    );

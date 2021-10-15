@@ -46,11 +46,11 @@ function createGraphWindows() {
 
 // when app is ready call the function to create login window
 app.whenReady().then(() => {
-  createWindow()
+  createGraphWindows()
 
   //  activating the app when no windows are available should open a new one one mac.
   app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createGraphWindows()
   })
 
 })
