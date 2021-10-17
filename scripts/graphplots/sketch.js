@@ -5,13 +5,13 @@
  */
 
 // get size of parent div for resizing and mapping
-var padding = 5
+var padding = 0
 var parentDiv = document.getElementById("graph")
 var parentDivWidth = parentDiv.getBoundingClientRect().width - padding
 var parentDivHeight = parentDiv.getBoundingClientRect().height - padding 
 
 // updated in accordance with theme colors
-var backgroundColor = "#000055"
+var backgroundColor = "#000022"
 var foregroundColor = "#ffffff"
 
 let graphCanvas
