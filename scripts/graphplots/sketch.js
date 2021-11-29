@@ -47,4 +47,5 @@ function windowResized() {
   function calculateScaleAndTransformation() {}
   function plotGraph() {}
   function plotIndicators() {}
+  function plotScale(){}
   function saveConfiguration() {}

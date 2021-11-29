@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="loadDoc()">Click</button>
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      console.log(JSON.parse(this.responseText));
+  };
+  xhttp.open("get", "http://127.0.0.1:5000//companyList", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
